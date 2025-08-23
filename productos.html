@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Catálogo de Muebles - Hermanos Jota</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Descubre nuestra amplia selección de muebles de calidad Hermanos Jota. Diseño contemporáneo con alma artesanal." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="assets/imgs/logo.svg"
+            alt="Logo Hermanos Jota"
+            class="logo-img" />
+          <h2 class="logo-text">Hermanos Jota</h2>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link active">Muebles</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Catálogo de Muebles</h1>
+        <p class="hero-subtitle">
+          Redescubrir el arte de vivir. Cada pieza cuenta una historia de
+          artesanía que honra el pasado mientras abraza el futuro.
+        </p>
+      </div>
+    </section>
+
+    <!-- Campo de búsqueda -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <div class="search-icon">🔍</div>
+          <input
+            type="text"
+            placeholder="Buscar muebles por nombre, descripción o categoría..."
+            id="busqueda-productos"
+            class="search-input" />
+        </div>
+        <div class="search-info">
+          <span id="productos-count">Mostrando todos los productos</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grilla de productos -->
+    <main class="main-content">
+      <div class="container">
+        <div class="productos-grilla" id="productos-grilla">
+          <!-- Aquí se insertarán las tarjetas de los productos con JS -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Hermanos Jota. Redescubriendo el arte de vivir desde 2025.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script para cargar productos -->
+    <script src="productos.js"></script>
+  </body>
 </html>
