@@ -3,28 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Contacto - Hermanos Jota</title>
+    <meta name="description" content="Contacta con Hermanos Jota. Estamos aquí para ayudarte a encontrar los muebles perfectos para tu hogar.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form action="" method="">
-        <div>
-            <label for="nombreUsuario">Nombre:</label>
-            <input type="text" name="nombre" id="nombreUsuario" required>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/imgs/logo.svg" alt="Logo Hermanos Jota" class="logo-img">
+                <h2 class="logo-text">Hermanos Jota</h2>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="productos.html" class="nav-link">Muebles</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+            </nav>
         </div>
+    </header>
 
-        <div>
-            <label for="emailUsuario">Email:</label>
-            <input type="email" name="email" id="emailUsuario" required>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Contacto</h1>
+            <p class="hero-subtitle">Estamos aquí para ayudarte a encontrar los muebles perfectos para tu hogar.</p>
         </div>
+    </section>
 
-        <div>
-            <label for="mensajeUsuario">Enviar Mensaje...</label>
-            <br>
-            <textarea name="mensaje" id="emailUsuario" rows="4" required></textarea>
+    <!-- Formulario de Contacto -->
+    <main class="main-content">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-family: 'Playfair Display', serif;">Envíanos un Mensaje</h2>
+                
+                <form action="" method="POST">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="nombreUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Nombre:</label>
+                        <input type="text" name="nombre" id="nombreUsuario" required 
+                               style="width: 100%; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: all 0.3s ease;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="emailUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Email:</label>
+                        <input type="email" name="email" id="emailUsuario" required 
+                               style="width: 100%; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: all 0.3s ease;">
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <label for="mensajeUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Mensaje:</label>
+                        <textarea name="mensaje" id="mensajeUsuario" rows="6" required 
+                                  style="width: 100%; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"></textarea>
+                    </div>
+
+                    <button type="submit" style="width: 100%; padding: 1rem 2rem; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Enviar Mensaje</button>
+                </form>
+            </div>
         </div>
+    </main>
 
-        <button type="submit">Enviar</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Información de la empresa -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/imgs/logo.svg" alt="Logo Hermanos Jota" class="footer-logo-img" />
+                        <h3 class="footer-logo-text">Hermanos Jota</h3>
+                    </div>
+                    <p class="footer-tagline">Redescubriendo el arte de vivir desde 2025</p>
+                    <p class="footer-description">
+                        Muebles de calidad diseñados con los más altos estándares de artesanía y sustentabilidad.
+                    </p>
+                </div>
 
-    </form>
+                <!-- Información de contacto -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <p class="contact-label">Showroom y Taller</p>
+                                <p>Av. San Juan 2847, San Cristóbal</p>
+                                <p>Ciudad Autónoma de Buenos Aires</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <p class="contact-label">WhatsApp</p>
+                                <p>+54 11 4567-8900</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p>info@hermanosjota.com.ar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horarios -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Horarios</h4>
+                    <div class="footer-hours">
+                        <div class="hours-item">
+                            <span class="days">Lunes a Viernes</span>
+                            <span class="time">10:00 - 19:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="days">Sábados</span>
+                            <span class="time">10:00 - 14:00</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="days">Domingos</span>
+                            <span class="time">Cerrado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span class="social-icon">📷</span>
+                            <span>@hermanosjota_ba</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <span class="social-icon">💬</span>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="footer-divider"></div>
+
+            <!-- Información legal -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2025 Hermanos Jota. Todos los derechos reservados.
+                </p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Política de Privacidad</a>
+                    <a href="#" class="footer-link">Términos y Condiciones</a>
+                    <a href="#" class="footer-link">Garantía</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
