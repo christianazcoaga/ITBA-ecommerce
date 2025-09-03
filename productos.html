@@ -5,26 +5,36 @@
     <title>Catálogo de Productos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel=""
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="assets/imgs/logo.svg"
+            alt="Logo Hermanos Jota"
+            class="logo-img" />
+          <h2 class="logo-text">Hermanos Jota</h2>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link active">Muebles</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </nav>
+      </div>
     </header>
 
     <!-- Campo de búsqueda -->
-    <section>
-      <h1>Catálogo de Productos</h1>
-      <input type="text" placeholder="Buscar productos..." id="busqueda-productos">
+    <section class="search-section">
+      <div class="search-container">
+        <h1>Catálogo de Productos</h1>
+        <input class="search-input" type="text" placeholder="Buscar productos..." id="busqueda-productos">
+      </div>
     </section>
 
     <!-- Grilla de productos (se llenará con JS) -->
-    <main>
+    <main class="main-content">
       <div class="productos-grilla" id="productos-grilla">
         <!-- Aquí se insertarán las tarjetas de los 11 productos con JS -->
       </div>

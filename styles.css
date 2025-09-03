@@ -285,6 +285,7 @@ body {
 /* Main Content */
 .main-content {
   padding: 4rem 0;
+  margin: 1rem;
 }
 
 .productos-grilla {
