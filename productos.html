@@ -1,143 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Catálogo de Productos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <img
-            src="assets/imgs/logo.svg"
-            alt="Logo Hermanos Jota"
-            class="logo-img" />
-          <h2 class="logo-text">Hermanos Jota</h2>
-        </div>
-        <nav class="nav">
-          <a href="index.html" class="nav-link">Inicio</a>
-          <a href="productos.html" class="nav-link active">Muebles</a>
-          <a href="contacto.html" class="nav-link">Contacto</a>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Catálogo de Muebles - Hermanos Jota</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descubre nuestra colección de muebles artesanales Hermanos Jota. Diseño contemporáneo con alma artesanal, redescubriendo el arte de vivir.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/imgs/logo.svg" alt="Logo Hermanos Jota" class="logo-img">
+        <h2 class="logo-text">Hermanos Jota</h2>
       </div>
-    </header>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="productos.html" class="nav-link active">Productos</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Campo de búsqueda -->
-    <section class="search-section">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Catálogo de Muebles</h1>
+      <p class="hero-subtitle">Redescubrir el arte de vivir. Cada pieza cuenta una historia de artesanía que honra el pasado mientras abraza el futuro.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Búsqueda -->
+  <section class="search-section">
+    <div class="container">
       <div class="search-container">
-        <h1>Catálogo de Productos</h1>
-        <input class="search-input" type="text" placeholder="Buscar productos..." id="busqueda-productos">
+        <div class="search-icon">🔍</div>
+        <input 
+          type="text" 
+          id="busqueda-productos" 
+          class="search-input" 
+          placeholder="Buscar muebles por nombre, descripción o categoría..."
+        >
       </div>
-    </section>
-
-    <!-- Grilla de productos (se llenará con JS) -->
-    <main class="main-content">
-      <div class="productos-grilla" id="productos-grilla">
-        <!-- Aquí se insertarán las tarjetas de los 11 productos con JS -->
+      <div class="search-info">
+        <span id="productos-count" class="productos-count">Mostrando todos los productos</span>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <!-- Información de la empresa -->
-          <div class="footer-section">
-            <div class="footer-logo">
-              <img src="assets/imgs/logo.svg" alt="Logo Hermanos Jota" class="footer-logo-img" />
-              <h3 class="footer-logo-text">Hermanos Jota</h3>
-            </div>
-            <p class="footer-tagline">Redescubriendo el arte de vivir desde 2025</p>
-            <p class="footer-description">
-              Muebles de calidad diseñados con los más altos estándares de artesanía y sustentabilidad.
-            </p>
+  <!-- Contenido Principal -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Indicador de carga -->
+      <div id="cargando" class="cargando">
+        <div class="spinner"></div>
+        <p>Cargando productos...</p>
+      </div>
+      
+      <!-- Grilla de productos -->
+      <div id="productos-grilla" class="productos-grilla">
+        <!-- Los productos se insertarán dinámicamente con JavaScript -->
+      </div>
+      
+      <!-- Mensaje cuando no hay resultados -->
+      <div id="no-resultados" class="no-resultados" style="display: none;">
+        <h3>No se encontraron productos</h3>
+        <p>Intenta con otros términos de búsqueda o revisa la ortografía.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Información de la empresa -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="assets/imgs/logo.svg" alt="Logo Hermanos Jota" class="footer-logo-img" />
+            <h3 class="footer-logo-text">Hermanos Jota</h3>
           </div>
-
-          <!-- Información de contacto -->
-          <div class="footer-section">
-            <h4 class="footer-title">Contacto</h4>
-            <div class="footer-contact">
-              <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <div>
-                  <p class="contact-label">Showroom y Taller</p>
-                  <p>Av. San Juan 2847, San Cristóbal</p>
-                  <p>Ciudad Autónoma de Buenos Aires</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">📞</span>
-                <div>
-                  <p class="contact-label">WhatsApp</p>
-                  <p>+54 11 4567-8900</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">✉️</span>
-                <div>
-                  <p class="contact-label">Email</p>
-                  <p>info@hermanosjota.com.ar</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Horarios -->
-          <div class="footer-section">
-            <h4 class="footer-title">Horarios</h4>
-            <div class="footer-hours">
-              <div class="hours-item">
-                <span class="days">Lunes a Viernes</span>
-                <span class="time">10:00 - 19:00</span>
-              </div>
-              <div class="hours-item">
-                <span class="days">Sábados</span>
-                <span class="time">10:00 - 14:00</span>
-              </div>
-              <div class="hours-item">
-                <span class="days">Domingos</span>
-                <span class="time">Cerrado</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Redes sociales -->
-          <div class="footer-section">
-            <h4 class="footer-title">Síguenos</h4>
-            <div class="footer-social">
-              <a href="#" class="social-link" aria-label="Instagram">
-                <span class="social-icon">📷</span>
-                <span>@hermanosjota_ba</span>
-              </a>
-              <a href="#" class="social-link" aria-label="WhatsApp">
-                <span class="social-icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Línea divisoria -->
-        <div class="footer-divider"></div>
-
-        <!-- Información legal -->
-        <div class="footer-bottom">
-          <p class="footer-copyright">
-            &copy; 2025 Hermanos Jota. Todos los derechos reservados.
+          <p class="footer-tagline">Redescubriendo el arte de vivir desde 2025</p>
+          <p class="footer-description">
+            Muebles de calidad diseñados con los más altos estándares de artesanía y sustentabilidad.
           </p>
-          <div class="footer-links">
-            <a href="#" class="footer-link">Política de Privacidad</a>
-            <a href="#" class="footer-link">Términos y Condiciones</a>
-            <a href="#" class="footer-link">Garantía</a>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="footer-section">
+          <h4 class="footer-title">Contacto</h4>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="contact-label">Showroom y Taller</p>
+                <p>Av. San Juan 2847, San Cristóbal</p>
+                <p>Ciudad Autónoma de Buenos Aires</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <p class="contact-label">WhatsApp</p>
+                <p>+54 11 4567-8900</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <p class="contact-label">Email</p>
+                <p>info@hermanosjota.com.ar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horarios -->
+        <div class="footer-section">
+          <h4 class="footer-title">Horarios</h4>
+          <div class="footer-hours">
+            <div class="hours-item">
+              <span class="days">Lunes a Viernes</span>
+              <span class="time">10:00 - 19:00</span>
+            </div>
+            <div class="hours-item">
+              <span class="days">Sábados</span>
+              <span class="time">10:00 - 14:00</span>
+            </div>
+            <div class="hours-item">
+              <span class="days">Domingos</span>
+              <span class="time">Cerrado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-section">
+          <h4 class="footer-title">Síguenos</h4>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <span class="social-icon">📷</span>
+              <span>@hermanosjota_ba</span>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <span class="social-icon">💬</span>
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
 
-    <!-- Script para cargar productos (ejemplo, debes crear productos.js) -->
-    <script src="productos.js"></script>
-  </body>
+      <!-- Línea divisoria -->
+      <div class="footer-divider"></div>
+
+      <!-- Información legal -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 Hermanos Jota. Todos los derechos reservados.
+        </p>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Política de Privacidad</a>
+          <a href="#" class="footer-link">Términos y Condiciones</a>
+          <a href="#" class="footer-link">Garantía</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para cargar productos -->
+  <script src="productos.js"></script>
+</body>
 </html>
