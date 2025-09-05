@@ -77,12 +77,31 @@ function mostrarProducto() {
     
     // 6. Mostrar el HTML en la página
     contenedor.innerHTML = html;
+
+    // Agregar el event listener después de insertar el HTML
+    const productoDetalle = document.querySelector('.producto-detalle-completo');
+    if (productoDetalle) {
+        productoDetalle.addEventListener('click', agregarAlCarrito);
+    }
 }
 
 // Función simple para simular agregar al carrito
-function agregarAlCarrito() {
-    alert('¡Producto agregado al carrito!');
-}
+//function agregarAlCarrito() {
+//   alert('¡Producto agregado al carrito!');
+//}
 
 // Cuando la página termine de cargar, mostrar el producto
 document.addEventListener('DOMContentLoaded', mostrarProducto);
+
+
+
+
+function agregarAlCarrito(e){
+    if(e.target.classList.contains('btn-agregar-carrito')){
+        const elementHtml = (e.target.parentElement.parentElement);
+        SelectData(elementHtml);
+    }
+}
+function SelectData(prod){
+    console.log(prod);
+}

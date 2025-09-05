@@ -387,3 +387,4 @@ function mostrarProductosDestacados() {
 if (document.getElementById("featured-products")) {
   document.addEventListener("DOMContentLoaded", mostrarProductosDestacados);
 }
+
