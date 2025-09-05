@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Inicio - Hermanos Jota</title>
+    <title>Detalle del Producto - Hermanos Jota</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -13,8 +13,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
       rel="stylesheet" />
-  </head>
-  <body>
+</head>
+<body>
     <!-- header -->
     <header class="header">
       <div class="container">
@@ -26,34 +26,22 @@
           <h2 class="logo-text">Hermanos Jota</h2>
         </div>
         <nav class="nav">
-          <a href="index.html" class="nav-link active">Inicio</a>
-          <a href="productos.html" class="nav-link">Productos</a>
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link active">Productos</a>
           <a href="contacto.html" class="nav-link">Contacto</a>
         </nav>
       </div>
     </header>
 
-    <!-- seccion de hero -->
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero-title">Calidad y Diseño que Transforman tu Hogar</h1>
-        <p class="hero-subtitle">
-          Descubre nuestra colección exclusiva de muebles diseñados con los más altos estándares de calidad y estilo. 
-          Cada pieza refleja nuestro compromiso con la excelencia artesanal y el diseño contemporáneo.
-        </p>
-      </div>
-    </section>
-
-    <!-- Sección de Productos Destacados -->
-    <section class="featured-products">
-      <div class="container">
-        <h2>Nuestros Productos Más Populares</h2>
-        <p class="section-subtitle">Descubre las piezas que más aman nuestros clientes</p>
-        <div class="productos-grilla" id="featured-products">
-          <!-- Los productos se cargarán dinámicamente con JavaScript -->
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Aquí se va a cargar el producto dinámicamente -->
+            <div id="producto-detalle">
+                <p>Cargando producto...</p>
+            </div>
         </div>
-      </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -74,7 +62,8 @@
       </div>
     </footer>
 
-    <!-- Script para cargar productos -->
+    <!-- Scripts -->
     <script src="productos.js"></script>
-  </body>
+    <script src="detalle-producto.js"></script>
+</body>
 </html>
