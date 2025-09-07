@@ -33,7 +33,7 @@ formulario.addEventListener('submit', function(evento){
     }
 
     if (esValido) {
-        formulario.submit();
         alert('¡Formulario enviado con éxito!');
+        formulario.submit();
     }
 })
