@@ -43,7 +43,7 @@
             <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
                 <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-family: 'Playfair Display', serif;">Envíanos un Mensaje</h2>
                 
-                <form action="" method="POST">
+                <form action="" method="POST" id="formularioContacto">
                     <div style="margin-bottom: 1.5rem;">
                         <label for="nombreUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Nombre:</label>
                         <input type="text" name="nombre" id="nombreUsuario" required 
@@ -52,16 +52,17 @@
 
                     <div style="margin-bottom: 1.5rem;">
                         <label for="emailUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Email:</label>
-                        <input type="email" name="email" id="emailUsuario" required 
+                        <input type="email" name="email" id="emailUsuario" placeholder="ejemplo@dominio.com" required 
                                style="width: 100%; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: all 0.3s ease;">
+                        <div id="msgErrorEmail" style="color: red"></div>
                     </div>
 
                     <div style="margin-bottom: 2rem;">
                         <label for="mensajeUsuario" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary);">Mensaje:</label>
                         <textarea name="mensaje" id="mensajeUsuario" rows="6" required 
                                   style="width: 100%; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; resize: vertical; transition: all 0.3s ease;"></textarea>
+                        <div id="msgErrorMensaje" style="color: red"></div>
                     </div>
-
                     <button type="submit" style="width: 100%; padding: 1rem 2rem; background: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Enviar Mensaje</button>
                 </form>
             </div>
@@ -86,5 +87,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="scripts/validacionContacto.js"></script>
 </body>
 </html>
