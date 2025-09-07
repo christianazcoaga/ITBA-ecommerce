@@ -59,12 +59,7 @@ formulario.addEventListener('submit', function(evento){
         // Mostrar mensaje de éxito usando manipulación del DOM
         const mensajeExito = document.createElement('div');
         mensajeExito.innerHTML = '¡Formulario enviado con éxito!';
-        mensajeExito.style.backgroundColor = '#d4edda';
-        mensajeExito.style.color = '#155724';
-        mensajeExito.style.padding = '15px';
-        mensajeExito.style.marginBottom = '15px';
-        mensajeExito.style.textAlign = 'center';
-        mensajeExito.style.borderRadius = '5px';
+        mensajeExito.className = 'mensaje-exito';
         
         // Insertar antes del formulario
         formulario.parentElement.insertBefore(mensajeExito, formulario);
