@@ -36,6 +36,4 @@ formulario.addEventListener('submit', function(evento){
         formulario.submit();
         alert('¡Formulario enviado con éxito!');
     }
-
-
 })
