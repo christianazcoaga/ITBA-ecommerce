@@ -64,7 +64,7 @@ function mostrarProducto() {
                     </ul>
                 </div>
                 
-                <button class="btn-agregar-carrito" onclick="agregarAlCarrito()">
+                <button class="btn-agregar-carrito" id="btn-agregar">
                     Añadir al Carrito
                 </button>
                 
@@ -78,10 +78,10 @@ function mostrarProducto() {
     // 6. Mostrar el HTML en la página
     contenedor.innerHTML = html;
 
-    // Agregar el event listener después de insertar el HTML
-    const productoDetalle = document.querySelector('.producto-detalle-completo');
-    if (productoDetalle) {
-        productoDetalle.addEventListener('click', agregarAlCarrito);
+    // 7. Agregar event listener al botón después de insertar el HTML
+    const btnAgregar = document.getElementById('btn-agregar');
+    if (btnAgregar) {
+        btnAgregar.addEventListener('click', agregarAlCarrito);
     }
 }
 
@@ -90,18 +90,59 @@ function mostrarProducto() {
 //   alert('¡Producto agregado al carrito!');
 //}
 
-// Cuando la página termine de cargar, mostrar el producto
-document.addEventListener('DOMContentLoaded', mostrarProducto);
+// Esta línea se removió porque ahora se maneja en el event listener de abajo
 
 
 
 
-function agregarAlCarrito(e){
-    if(e.target.classList.contains('btn-agregar-carrito')){
-        const elementHtml = (e.target.parentElement.parentElement);
-        SelectData(elementHtml);
+// Función simple para agregar al carrito
+function agregarAlCarrito(){
+    // Incrementar contador del carrito
+    incrementarCarrito();
+    
+    // Mostrar mensaje de confirmación
+    alert('¡Producto agregado al carrito!');
+}
+
+// Función para incrementar el contador del carrito
+function incrementarCarrito() {
+    const contador = document.getElementById('carrito-contador');
+    if (contador) {
+        let cantidad = parseInt(contador.textContent) || 0;
+        cantidad++;
+        contador.textContent = cantidad;
+        
+        // Guardar en localStorage para mantener el contador entre páginas
+        localStorage.setItem('carrito-cantidad', cantidad);
     }
 }
-function SelectData(prod){
-    console.log(prod);
+
+// Función para cargar el contador al iniciar la página
+function cargarContadorCarrito() {
+    const contador = document.getElementById('carrito-contador');
+    if (contador) {
+        const cantidad = localStorage.getItem('carrito-cantidad') || 0;
+        contador.textContent = cantidad;
+        
+        // Agregar evento de clic para limpiar carrito
+        contador.addEventListener('click', limpiarCarrito);
+    }
 }
+
+// Función para limpiar el carrito
+function limpiarCarrito() {
+    if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+        localStorage.removeItem('carrito-cantidad');
+        const contador = document.getElementById('carrito-contador');
+        if (contador) {
+            contador.textContent = '0';
+        }
+        alert('Carrito vaciado');
+    }
+}
+
+// Cargar contador cuando la página se carga
+document.addEventListener('DOMContentLoaded', function() {
+    cargarContadorCarrito();
+    mostrarProducto();
+});

@@ -13,6 +13,15 @@ function validarEmail (email) {
     return emailPatron.test(email);
 }
 
+// Limpiar mensajes de error cuando el usuario empiece a escribir
+emailUsuario.addEventListener('input', function() {
+    msgErrorEmail.textContent = '';
+});
+
+mensajeUsuario.addEventListener('input', function() {
+    msgErrorMensaje.textContent = '';
+});
+
 formulario.addEventListener('submit', function(evento){
     // prevenir que se envie el formulario
     evento.preventDefault();
@@ -34,6 +43,17 @@ formulario.addEventListener('submit', function(evento){
 
     if (esValido) {
         alert('¡Formulario enviado con éxito!');
-        formulario.submit();
+        
+        // Limpiar el formulario
+        formulario.reset();
+        
+        // Limpiar mensajes de error
+        msgErrorEmail.textContent = '';
+        msgErrorMensaje.textContent = '';
+        
+        // Redireccionar a contacto.html después de un breve delay
+        setTimeout(function() {
+            window.location.href = 'contacto.html';
+        }, 1000);
     }
 })
