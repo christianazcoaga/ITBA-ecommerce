@@ -4,7 +4,7 @@
 
 ## Integrantes
 - Azcoaga, Christian.
-- Bellomo, Lucas.
+- Bellomo, Lucca.
 - Bibilaqua, Matias.
 - Carrillo, Gonzalo Alejo.
 - Simone, Santiago.
